@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  header{
+    background-color: rgb(172, 0, 52);
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    text-shadow: 2px 2px 4px black;
+  }
+  nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 30px;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+  }
+  main{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 2%;
+  }
+  .preguntas{
+      text-align: center;
+      width: 30%;
+      background-color: rgb(192, 189, 189);
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-area: 10%;
+      border-radius: 5px;
+      padding: 1%;
+  }
+  .preguntas div{
+      background-color: white;
+      margin: 2px;
+      text-align: center;
+  }
