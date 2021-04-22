@@ -11,6 +11,8 @@ header {
   height: 15vh;
   padding: 2%;
   color: white;
+  align-items: center;
+  justify-content: center;
   text-shadow: 1px 1px 2px black;
 }
 nav {
@@ -21,6 +23,9 @@ nav {
   font-size: 30px;
   color: white;
   text-shadow: 1px 1px 2px black;
+}
+#salir{
+  cursor: pointer;
 }
 main {
   display: flex;
