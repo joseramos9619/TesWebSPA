@@ -14,26 +14,39 @@
     <link rel="stylesheet" href="css/estilo.css" />
   </head>
   <body>
-    <header id="barra" style="display: none;">
+    <header id="barra">
       <nav>
         <h1 id="usuario"><i class="far fa-user"></i> nombre de usuario</h1>
         <i class="fas fa-sign-out-alt"></i>
       </nav>
     </header>
     <main id="tes">
-        <div class="preguntas">
-            <div id="1">1</div>
-            <div id="2">2</div>
-            <div id="3">3</div>
-            <div id="4">4</div>
-            <div id="5">5</div>
-            <div id="6">6</div>
-            <div id="7">7</div>
-            <div id="8">8</div>
-        </div>
+      <div class="preguntas">
+        <div id="1" style="background-color: rgb(92, 204, 92);">1</div>
+        <div id="2">2</div>
+        <div id="3">3</div>
+        <div id="4">4</div>
+        <div id="5">5</div>
+        <div id="6">6</div>
+        <div id="7">7</div>
+        <div id="8">8</div>
+      </div>
+      
+      <div class="responder">
+        <div id="p-1" >1</div>
+        <div id="p-2" style="display: none;">2</div>
+        <div id="p-3" style="display: none">3</div>
+        <div id="p-4" style="display: none">4</div>
+        <div id="p-5" style="display: none">5</div>
+        <div id="p-6" style="display: none">6</div>
+        <div id="p-7" style="display: none">7</div>
+        <div id="p-8" style="display: none">8</div>
+        <samp class="botones">
+          <button id="btnver" style="display: none;">Ant</button>
+          <button id="btnocultar">Sig</button>
+        </samp>
+      </div>
     </main>
-    <button id="btnver">ver</button>
-    <button id="btnocultar">ocultar</button>
   </body>
   <script src="js/control.js"></script>
 </html>
