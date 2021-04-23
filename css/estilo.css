@@ -123,6 +123,20 @@ button:hover {
     border: 1px solid rgb(0, 172, 149);
     border-radius: 20px;
 }
+#contador{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px black;
+}
+progress{
+  width: 300px;
+  margin: 1%;
+  height: 20px;
+}
 @media only screen and (max-width: 600px) {
     nav{
         font-size: 120%;

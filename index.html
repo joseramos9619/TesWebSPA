@@ -21,16 +21,21 @@
         <i id="salir" class="fas fa-sign-out-alt"></i>
       </nav>
     </header>
-    <main id="test" style="display: none">
+
+    <main id="test">
       <div class="preguntas">
-        <div id="1" style="background-color: rgb(92, 204, 92)">1</div>
-        <div id="2">2</div>
-        <div id="3">3</div>
-        <div id="4">4</div>
-        <div id="5">5</div>
-        <div id="6">6</div>
-        <div id="7">7</div>
-        <div id="8">8</div>
+        <div id="a-1" style="background-color: rgb(92, 204, 92)">1</div>
+        <div id="a-2">2</div>
+        <div id="a-3">3</div>
+        <div id="a-4">4</div>
+        <div id="a-5">5</div>
+        <div id="a-6">6</div>
+        <div id="a-7">7</div>
+        <div id="a-8">8</div>
+      </div>
+
+      <div class="progress">
+          <progress id="cargar" max="8" value="1"></progress>
       </div>
 
       <div class="responder">
@@ -58,13 +63,17 @@
         <div id="p-8" style="display: none">
           8 <input type="text" id="r-8" placeholder="respuesta"/>
         </div>
-        <samp class="botones">
+
+        <span class="botones">
           <button id="btnant" style="display: none">Ant</button>
+          <span id="contador">1/8</span>
           <button id="btnsig">Sig</button>
-        </samp>
+          <button id="btnfin" style="display: none">fin</button>
+        </span>
       </div>
     </main>
-    <div class="login">
+
+    <div class="login" style="display: none">
       <div class="login-header">Datos requeridos</div>
       <div class="login-form">
         <input type="text" id="nombres" placeholder="Nombres"/>
