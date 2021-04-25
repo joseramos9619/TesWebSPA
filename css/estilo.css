@@ -63,6 +63,7 @@ main {
   border-radius: 20px;
   box-shadow: 1px 1px 2px black;
 }
+
 .responder div {
   background-color: white;
   width: 100%;
@@ -78,6 +79,8 @@ main {
   height: 5vh;
   border-radius: 25px;
   border: 2px solid rgb(0, 172, 149);
+  text-align: center;
+  font-size: 25px;
 }
 .botones {
   display: flex;
@@ -145,6 +148,25 @@ progress {
   width: 300px;
   margin: 1%;
   height: 20px;
+}
+.resultado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6% 20%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px black;
+  padding: 1%;
+}
+.resultado div{
+  width: 100%;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 25px;
+  border: 2px solid gray;
+}
+.resultado span{
+  text-align: center;
 }
 @media only screen and (max-width: 600px) {
   nav {

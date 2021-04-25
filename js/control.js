@@ -5,7 +5,8 @@ const barra = document.querySelector("header > nav");
 const datos = document.querySelectorAll(".login input");
 const login = document.querySelector(".login");
 const test = document.querySelector("#test");
-const soluc=['a','b','c','c','c','a','c','b'];
+const resultado = document.querySelector(".resultado");
+const soluc = ['a', 'b', 'c', 'c', 'c', 'a', 'c', 'b'];
 
 botones.forEach((boton) => {
   boton.addEventListener("click", (evento) => {
@@ -36,8 +37,6 @@ botones.forEach((boton) => {
         test.querySelector("#cargar").setAttribute("value", cont);
       }
       if (cont == 8) {
-        let sig = `#a-${cont}`;
-        let ant = `#a-${cont - 1}`;
         test.querySelector(`#a-${cont}`).setAttribute("style", "background-color: rgb(92, 204, 92)");
         test.querySelector(`#a-${cont - 1}`).removeAttribute("style");
         botones[1].setAttribute("style", "display: none;");
@@ -52,7 +51,7 @@ botones.forEach((boton) => {
         test.querySelector(`#a-${cont + 1}`).removeAttribute("style")
         test.querySelector(`#a-${cont}`).setAttribute("style", "background-color: rgb(92, 204, 92)");
         test.querySelector(`#p-${cont}`).removeAttribute("style");
-        test.querySelector(`#p-${cont+1}`).setAttribute("style", "display: none;");
+        test.querySelector(`#p-${cont + 1}`).setAttribute("style", "display: none;");
         botones[1].removeAttribute("style");
         test.querySelector("#contador").innerText = `${cont}/8`;
         botones[2].setAttribute("style", "display: none;");
@@ -65,6 +64,32 @@ botones.forEach((boton) => {
         test.querySelector("#contador").innerText = `${cont}/8`;
         test.querySelector("#cargar").setAttribute("value", cont);
       }
+    }
+
+    if (boton.id == "btnfin") {
+      let asier=0;
+      for (let i = 0; i <= 7; i++) {
+        let respuesta = test.querySelector(`#r-${i + 1}`).value
+        if (soluc[i] == respuesta) {
+          asier++;
+          resultado.querySelector(`#res-${i + 1}`).setAttribute("style", "border: 2px solid rgb(0, 172, 149);");
+        }
+        else {
+          resultado.querySelector(`#res-${i + 1}`).setAttribute("style", "border: 2px solid red;");
+        }
+
+      }
+      console.log(asier)
+      resultado.querySelector("span").innerHTML=`${asier}/8<br>
+      Nota: ${asier*0.625}`;
+      if((asier*0.625)>=3){
+        resultado.querySelector("h2").innerText="Test Aprobado";
+      }
+      else{
+        resultado.querySelector("h2").innerText="Test Reprobado";
+      }
+      test.setAttribute("style", "display: none;");
+      resultado.removeAttribute("style");
     }
   });
 });
