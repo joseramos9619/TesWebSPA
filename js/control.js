@@ -22,6 +22,7 @@ botones.forEach((boton) => {
         botones[0].setAttribute("style","display: none;");
         botones[1].removeAttribute("style");
         botones[2].setAttribute("style","display: none;");
+        test.querySelector("#cargar").setAttribute("value", "1");
 
       }
       else {
