@@ -174,12 +174,12 @@ progress {
   }
 }
 @media only screen and (max-width: 850px) {
-  .resultado div{
+  .resultado div {
     font-size: 15px;
   }
 }
 @media only screen and (max-width: 800px) {
-  .resultado div{
+  .resultado div {
     font-size: 12px;
   }
 }
@@ -187,10 +187,10 @@ progress {
   header h1 {
     font-size: 120%;
   }
-  progress{
+  progress {
     width: 200px;
   }
-  .resultado div{
+  .resultado div {
     font-size: 10px;
   }
 }
