@@ -5,6 +5,7 @@ const barra = document.querySelector("header > nav");
 const datos = document.querySelectorAll(".login input");
 const login = document.querySelector(".login");
 const test = document.querySelector("#test");
+const soluc=['a','b','c','c','c','a','c','b'];
 
 botones.forEach((boton) => {
   boton.addEventListener("click", (evento) => {
@@ -26,45 +27,43 @@ botones.forEach((boton) => {
     if (boton.id == "btnsig") {
       if (cont >= 1 && cont <= 7) {
         cont++;
-        let sig = "#a-" + cont;
-        let ant = `#a-${cont - 1}`;
-        test.querySelector(sig).setAttribute("style", "background-color: rgb(92, 204, 92)");
-        test.querySelector(ant).removeAttribute("style");
+        test.querySelector(`#a-${cont}`).setAttribute("style", "background-color: rgb(92, 204, 92)");
+        test.querySelector(`#a-${cont - 1}`).removeAttribute("style");
+        test.querySelector(`#p-${cont}`).removeAttribute("style");
+        test.querySelector(`#p-${cont - 1}`).setAttribute("style", "display: none;");
         botones[0].removeAttribute("style");
-        test.querySelector("#contador").innerText=`${cont}/8`;
-        test.querySelector("#cargar").setAttribute("value",cont);
+        test.querySelector("#contador").innerText = `${cont}/8`;
+        test.querySelector("#cargar").setAttribute("value", cont);
       }
       if (cont == 8) {
-        let sig = "#a-" + cont;
+        let sig = `#a-${cont}`;
         let ant = `#a-${cont - 1}`;
-        test.querySelector(sig).setAttribute("style", "background-color: rgb(92, 204, 92)");
-        test.querySelector(ant).removeAttribute("style");
+        test.querySelector(`#a-${cont}`).setAttribute("style", "background-color: rgb(92, 204, 92)");
+        test.querySelector(`#a-${cont - 1}`).removeAttribute("style");
         botones[1].setAttribute("style", "display: none;");
         botones[2].removeAttribute("style");
-        test.querySelector("#cargar").setAttribute("value",cont);
+        test.querySelector("#cargar").setAttribute("value", cont);
       }
     }
 
     if (boton.id == "btnant") {
       if (cont <= 8 && cont >= 2) {
         cont--;
-        let ant = "#a-" + cont;
-        let sig = `#a-${cont + 1}`;
-        test.querySelector(sig).removeAttribute("style")
-        test.querySelector(ant).setAttribute("style", "background-color: rgb(92, 204, 92)");
+        test.querySelector(`#a-${cont + 1}`).removeAttribute("style")
+        test.querySelector(`#a-${cont}`).setAttribute("style", "background-color: rgb(92, 204, 92)");
+        test.querySelector(`#p-${cont}`).removeAttribute("style");
+        test.querySelector(`#p-${cont+1}`).setAttribute("style", "display: none;");
         botones[1].removeAttribute("style");
-        test.querySelector("#contador").innerText=`${cont}/8`;
+        test.querySelector("#contador").innerText = `${cont}/8`;
         botones[2].setAttribute("style", "display: none;");
-        test.querySelector("#cargar").setAttribute("value",cont);
+        test.querySelector("#cargar").setAttribute("value", cont);
       }
       if (cont == 1) {
-        let ant = "#a-" + cont;
-        let sig = `#a-${cont + 1}`;
-        test.querySelector(sig).removeAttribute("style")
+        test.querySelector(`#a-${cont + 1}`).removeAttribute("style")
         test.querySelector(ant).setAttribute("style", "background-color: rgb(92, 204, 92)");
         botones[0].setAttribute("style", "display: none;");
-        test.querySelector("#contador").innerText=`${cont}/8`;
-        test.querySelector("#cargar").setAttribute("value",cont);
+        test.querySelector("#contador").innerText = `${cont}/8`;
+        test.querySelector("#cargar").setAttribute("value", cont);
       }
     }
   });
